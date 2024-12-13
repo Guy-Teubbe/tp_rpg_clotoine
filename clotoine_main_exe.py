@@ -86,13 +86,10 @@ def monter_niveau(perso = {}):
     perso["Vie"] += 20
 
 
-
-#attaquer
-
+##########
+#attaquer# TEST UNITAIRE OK
+##########
 def attaque(perso1 = {}, perso2 = {}):
-    # degats1 = 10 * perso1["Niveau"]
-    # degats2 = 10 * perso2["Niveau"]
-
     while perso1["Vie"] > 0 or perso2["Vie"] > 0:
         degats1 = random.randint(1,6)
         degats2 = random.randint(1,6)
@@ -114,7 +111,6 @@ def attaque(perso1 = {}, perso2 = {}):
         print(f"{perso1["Nom"]} est mort.")
     elif perso2["Vie"] == 0 :
         print(f"{perso2["Nom"]} est mort.")
-
 
 
 
@@ -187,20 +183,21 @@ def utiliserObjet(objet,cible,inventaire,cle):
 
 def executionPrg():
      
-     credits()
+    credits()
 
-     menu()
-#     monter_niveau(Personnage1)
-#     afficherPerso(Personnage1)
-#     input(">")
-#     utiliserObjet(Objet["1"],Personnage1,Inventaire1,"1")
-#     input(">")
+    menu()
 
-#     afficherPerso(Personnage1)
-#     input(">")
-#     recalculerIndexInventaire(Inventaire1)
+    monter_niveau(Personnage1)
+    afficherPerso(Personnage1)
+    input(">")
+    utiliserObjet(Objet["1"],Personnage1,Inventaire1,"1")
+    input(">")
 
-#     attaque(Personnage1, Personnage2)
+    afficherPerso(Personnage1)
+    input(">")
+    recalculerIndexInventaire(Inventaire1)
+
+    attaque(Personnage1, Personnage2)
 
 
 executionPrg()
