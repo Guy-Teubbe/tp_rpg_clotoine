@@ -1,5 +1,8 @@
 import random
 #FICHIER PRINCIPAL D'EXECUTION
+#
+# FILTHY WANKERZ III
+# Return to Tartiflex
 
 #Création de personnage
 # Nom
@@ -7,7 +10,11 @@ import random
 # Niveau
 # Vie
 # Inventaire
-Objet = {"Potion de Soin":{"propriété":"Vie","action":"+","min":1,"max":50},"Poison de Vie":{"propriété":"Vie","action":"-","min":0,"max":15}}
+
+Objet = {"Potion de Soin":{"propriété":"Vie","action":"+","min":1,"max":50},
+         "Poison de Vie":{"propriété":"Vie","action":"-","min":0,"max":15},
+         "Potion de Defense":{"propriété":"Defense","action":"+","min":2,"max":2},
+         "Poison de Faiblesse":{"propriété":"Defense","action":"-","min":0,"max":2}}
 
 
 Inventaire1 = {"1":Objet["Potion de Soin"],"2":Objet["Potion de Soin"],"3":Objet["Potion de Soin"]}
@@ -29,3 +36,8 @@ Personnage1 = {"Nom":"Moudujon","Classe":Classe["Copromancien"],"Niveau":1,"Vie"
 #ajouter à l'inventaire
 
 #utilisation d'un objet
+
+def utiliserObjet(objet,personnage):
+    pass
+
+
