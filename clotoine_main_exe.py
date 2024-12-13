@@ -33,11 +33,19 @@ Personnage1 = {"Nom":"Moudujon","Classe":Classe["Copromancien"],"Niveau":1,"Vie"
 
 #passage de niveau
 
+def monter_niveau(perso = {}):
+    print(perso)
+    perso["Niveau"] += 1
+    perso["Vie"] += 20
+
+monter_niveau(Personnage1)
+print(Personnage1)
+
 #attaquer
 
 #ajouter à l'inventaire
 
-def ajout_invent(var):
+def ajout_invent(var = {}):
     print(Objet)
     nb = input("Numéro de l'objet : ")
 
@@ -45,8 +53,8 @@ def ajout_invent(var):
 
     var[place] = Objet[nb]
 
-ajout_invent(Inventaire1)
-print(Inventaire1)
+# ajout_invent(Inventaire1)
+# print(Inventaire1)
 
 #utilisation d'un objet
 #utilisation d'un objet
