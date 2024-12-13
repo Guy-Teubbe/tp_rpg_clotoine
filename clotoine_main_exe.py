@@ -22,7 +22,7 @@ Objet = {"1":{"nom":"Potion de Santé","propriété":"Vie","action":"+","min":1,
 Inventaire1 = {"1":Objet["1"],"2":Objet["1"],"3":Objet["1"]}
 Inventaire2 = {"1":Objet["1"],"2":Objet["1"],"3":Objet["2"]}
 
-Classe = {"Nécromancien":{"Vie":"+2"},"Zoomancien":{"Defense":"+1"},"Copromancien":{"Objet":Objet["Poison de Vie"]}}
+Classe = {"Nécromancien":{"Vie":"+2"},"Zoomancien":{"Defense":"+1"},"Copromancien":{"Objet":Objet["2"]}}
 
 Personnage1 = {"Nom":"Bandmou","Classe":Classe["Nécromancien"],"Niveau":1,"Vie":12,"Inventaire":Inventaire1,"Defense":9,"XP":0}
 Personnage1 = {"Nom":"Moudujon","Classe":Classe["Copromancien"],"Niveau":1,"Vie":10,"Inventaire":Inventaire2,"Defense":10,"XP":0}
