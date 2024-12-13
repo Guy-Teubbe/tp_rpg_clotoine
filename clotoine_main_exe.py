@@ -1,5 +1,6 @@
 import random
 import copy
+
 #FICHIER PRINCIPAL D'EXECUTION
 #
 # FILTHY WANKERZ III
@@ -66,20 +67,20 @@ def ajout_invent(var = {}):
 #Recalculer Index Inventaire#
 #############################
 def recalculerIndexInventaire(inventaire,cle):
-    print(f"Inventaire avant recalcul:\n{inventaire}")
+    i = int(cle)+1
+    #for i in range(int(cle)+1,4):
+    index = copy.copy(len(inventaire)+1)
+
+    while i <= index:
+
+        itemDecale = inventaire[str(i)]
 
 
-    #for i in range(1,len(inventaire)+1):
+        inventaire[str(int(i)-1)] = itemDecale
 
+        del inventaire[str(i)]
+        i += 1
 
-    # for key in range(1,len(inventaire)+1):
-    #     if int(key) > int(cle):
-    #         itemDecale = copy.copy(inventaire[key])
-    #         inventaire[str(int(key)-1)] = itemDecale
-
-    #         del inventaire[key]
-
-    print(f"Inventaire après recalcul:\n{inventaire}")
             
 
 
@@ -119,7 +120,7 @@ def executionPrg():
 
     afficherPerso(Personnage1)
     input(">")
-    recalculerIndexInventaire(Inventaire1)
+    #recalculerIndexInventaire(Inventaire1)
 
 
 executionPrg()
