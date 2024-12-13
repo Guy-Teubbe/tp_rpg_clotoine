@@ -11,14 +11,16 @@ import random
 # Vie
 # Inventaire
 
-Objet = {"Potion de Soin":{"propriété":"Vie","action":"+","min":1,"max":50},
-         "Poison de Vie":{"propriété":"Vie","action":"-","min":0,"max":15},
-         "Potion de Defense":{"propriété":"Defense","action":"+","min":2,"max":2},
-         "Poison de Faiblesse":{"propriété":"Defense","action":"-","min":0,"max":2}}
 
 
-Inventaire1 = {"1":Objet["Potion de Soin"],"2":Objet["Potion de Soin"],"3":Objet["Potion de Soin"]}
-Inventaire2 = {"1":Objet["Potion de Soin"],"2":Objet["Potion de Soin"],"3":Objet["Poison de Vie"]}
+Objet = {"1":{"nom":"Potion de Santé","propriété":"Vie","action":"+","min":1,"max":50},
+         "2":{"nom":"Poison de Vie","propriété":"Vie","action":"-","min":0,"max":15},
+         "3":{"nom":"Potion de Defense","propriété":"Defense","action":"+","min":2,"max":2},
+         "4":{"nom":"Poison de Faiblesse","propriété":"Defense","action":"-","min":0,"max":2}}
+
+
+Inventaire1 = {"1":Objet["1"],"2":Objet["1"],"3":Objet["1"]}
+Inventaire2 = {"1":Objet["1"],"2":Objet["1"],"3":Objet["2"]}
 
 Classe = {"Nécromancien":{"Vie":"+2"},"Zoomancien":{"Defense":"+1"},"Copromancien":{"Objet":Objet["Poison de Vie"]}}
 
@@ -37,7 +39,14 @@ Personnage1 = {"Nom":"Moudujon","Classe":Classe["Copromancien"],"Niveau":1,"Vie"
 
 #utilisation d'un objet
 
-def utiliserObjet(objet,personnage):
-    pass
+def utiliserObjet(objet,personnage,cible):
+    #ajouter les bénéfices de l'objet sur le personnage
+        objet["propriété"]
+        objet["action"]
+        val = random.randint(objet["min"],objet["max"])
+
+
+
+    #consommer l'objet de l'inventaire
 
 
