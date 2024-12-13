@@ -30,26 +30,25 @@ Personnage1 = {"Nom":"Bandmou","Classe":Classe["Nécromancien"]["Nom"],"Niveau":
 Personnage2 = {"Nom":"Moudujon","Classe":Classe["Copromancien"]["Nom"],"Niveau":1,"Vie":10,"Inventaire":Inventaire2,"Defense":10,"XP":0}
 
 
-#Création des  classes
 
-#Création de l'inventaire
-
-#passage de niveau
-
+###################
+#passage de niveau# TEST UNITAIRE OK
+###################
 def monter_niveau(perso = {}):
     print(perso)
     perso["Niveau"] += 1
     perso["Vie"] += 20
 
 
-
-#attaquer
+######################
+#afficher fiche perso# TEST UNITAIRE OK
+######################
 def afficherPerso(perso):
      print(f"{perso["Nom"]}\n-Classe: {perso["Classe"]}\n-Niveau: {perso["Niveau"]}\n-Vie: {perso["Vie"]}\n-Defense: {perso["Defense"]}\n-XP: {perso["XP"]}\n\nINVENTAIRE\n{perso["Inventaire"]}")
 
 
 ########################
-#ajouter à l'inventaire#
+#ajouter à l'inventaire# TEST UNITAIRE OK
 ########################
 def ajout_invent(var = {}):
     print(Objet)
@@ -59,16 +58,14 @@ def ajout_invent(var = {}):
 
     var[place] = Objet[nb]
 
-# ajout_invent(Inventaire1)
-# print(Inventaire1)
 
 
 #############################
-#Recalculer Index Inventaire#
+#Recalculer Index Inventaire# TEST UNITAIRE OK
 #############################
 def recalculerIndexInventaire(inventaire,cle):
     i = int(cle)+1
-    #for i in range(int(cle)+1,4):
+
     index = copy.copy(len(inventaire)+1)
 
     while i <= index:
@@ -85,7 +82,7 @@ def recalculerIndexInventaire(inventaire,cle):
 
 
 ########################
-#utilisation d'un objet#
+#utilisation d'un objet# TEST UNITAIRE OK
 ########################
 def utiliserObjet(objet,cible,inventaire,cle):
     #ajouter les bénéfices de l'objet sur le personnage
