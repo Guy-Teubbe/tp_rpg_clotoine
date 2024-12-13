@@ -1,5 +1,7 @@
 import random
 import copy
+import os
+import keyboard
 
 #FICHIER PRINCIPAL D'EXECUTION
 #
@@ -12,6 +14,50 @@ import copy
 # Niveau
 # Vie
 # Inventaire
+
+def ecran(vide=False,titre="",sousTitre="",centreHaut="",gaucheHaut="",droiteHaut="",centreBas="",gaucheBas="",droiteBas=""):
+
+    if sousTitre == None or sousTitre == "": sousTitre == "        "
+    if centreHaut == None or centreHaut == "": centreHaut == "        "
+    if gaucheHaut == None or gaucheHaut == "": gaucheHaut == "        "
+    if droiteHaut == None or droiteHaut == "": droiteHaut == "        "
+    if centreBas == None or centreBas == "": centreBas == "        "
+    if gaucheBas == None or gaucheBas == "": gaucheBas == "        "
+    if droiteBas == None or droiteBas == "": droiteBas == "        "
+    if titre == None or titre == "": titre == "        "
+
+    if vide != True:
+        print(f"                               {centreHaut}                                      ")
+        print(f" {gaucheHaut}                                                       {droiteHaut} ")
+        print(f"                                                                                 ")
+        print(f"                                                                                 ")
+        print(f"                                 {titre}                                         ")
+        print(f"                               {sousTitre}                                       ")
+        print(f"                                                                                 ")
+        print(f" {gaucheBas}                                                         {droiteBas} ")
+        print(f"                               {centreBas}                                       ")
+
+
+    else:
+        print("                                                                                  ")
+        print("                                                                                  ")
+        print("                                                                                  ")
+        print("                                                                                  ")
+        print("                                                                                  ")
+        print("                                                                                  ")
+        print("                                                                                  ")
+        print("                                                                                  ")
+        print("                                                                                  ")
+
+def credits():
+    ecran(False,"Edition Bignou","Trululu")
+    os.system('cls')
+    ecran(False,"Turboflette Studio","Ze Trululu Enterprise")
+    os.system('cls')
+    ecran(False,"FILTHY WANKERZ III","Call of Tartiflex")
+
+def menu():
+    print("Menu")
 
 
 
@@ -69,7 +115,7 @@ def attaque(perso1 = {}, perso2 = {}):
     elif perso2["Vie"] == 0 :
         print(f"{perso2["Nom"]} est mort.")
 
-attaque(Personnage1, Personnage2)
+
 
 
 ######################
@@ -139,8 +185,11 @@ def utiliserObjet(objet,cible,inventaire,cle):
 
 
 
-# def executionPrg():
+def executionPrg():
      
+     credits()
+
+     menu()
 #     monter_niveau(Personnage1)
 #     afficherPerso(Personnage1)
 #     input(">")
@@ -154,4 +203,4 @@ def utiliserObjet(objet,cible,inventaire,cle):
 #     attaque(Personnage1, Personnage2)
 
 
-# executionPrg()
+executionPrg()
