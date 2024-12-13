@@ -1,5 +1,6 @@
 import random
 import copy
+
 #FICHIER PRINCIPAL D'EXECUTION
 #
 # FILTHY WANKERZ III
@@ -29,12 +30,10 @@ Personnage1 = {"Nom":"Bandmou","Classe":Classe["Nécromancien"]["Nom"],"Niveau":
 Personnage2 = {"Nom":"Moudujon","Classe":Classe["Copromancien"]["Nom"],"Niveau":1,"Vie":10,"Inventaire":Inventaire2,"Defense":10,"XP":0}
 
 
-#Création des  classes
 
-#Création de l'inventaire
-
-#passage de niveau
-
+###################
+#passage de niveau# TEST UNITAIRE OK
+###################
 def monter_niveau(perso = {}):
     afficherPerso(perso)
     perso["Niveau"] += 1
@@ -73,12 +72,15 @@ def attaque(perso1 = {}, perso2 = {}):
 attaque(Personnage1, Personnage2)
 
 
+######################
+#afficher fiche perso# TEST UNITAIRE OK
+######################
 def afficherPerso(perso):
      print(f"{perso["Nom"]}\n-Classe: {perso["Classe"]}\n-Niveau: {perso["Niveau"]}\n-Vie: {perso["Vie"]}\n-Defense: {perso["Defense"]}\n-XP: {perso["XP"]}\n\nINVENTAIRE\n{perso["Inventaire"]}")
 
 
 ########################
-#ajouter à l'inventaire#
+#ajouter à l'inventaire# TEST UNITAIRE OK
 ########################
 def ajout_invent(var = {}):
     print(Objet)
@@ -88,33 +90,31 @@ def ajout_invent(var = {}):
 
     var[place] = Objet[nb]
 
-# ajout_invent(Inventaire1)
-# print(Inventaire1)
 
 
 #############################
-#Recalculer Index Inventaire#
+#Recalculer Index Inventaire# TEST UNITAIRE OK
 #############################
 def recalculerIndexInventaire(inventaire,cle):
-    print(f"Inventaire avant recalcul:\n{inventaire}")
+    i = int(cle)+1
+
+    index = copy.copy(len(inventaire)+1)
+
+    while i <= index:
+
+        itemDecale = inventaire[str(i)]
 
 
-    #for i in range(1,len(inventaire)+1):
+        inventaire[str(int(i)-1)] = itemDecale
 
+        del inventaire[str(i)]
+        i += 1
 
-    # for key in range(1,len(inventaire)+1):
-    #     if int(key) > int(cle):
-    #         itemDecale = copy.copy(inventaire[key])
-    #         inventaire[str(int(key)-1)] = itemDecale
-
-    #         del inventaire[key]
-
-    print(f"Inventaire après recalcul:\n{inventaire}")
             
 
 
 ########################
-#utilisation d'un objet#
+#utilisation d'un objet# TEST UNITAIRE OK
 ########################
 def utiliserObjet(objet,cible,inventaire,cle):
     #ajouter les bénéfices de l'objet sur le personnage
