@@ -27,4 +27,14 @@ Personnage1 = {"Nom":"Moudujon","Classe":Classe["Copromancien"],"Niveau":1,"Vie"
 
 #ajouter à l'inventaire
 
+def ajout_invent(var):
+    print(Objet)
+    nb = input("Numéro de l'objet : ")
+
+    place =  int(list(var.keys())[-1]) + 1
+
+    var[place] = Objet[nb]
+
+ajout_invent(Inventaire1)
+
 #utilisation d'un objet
