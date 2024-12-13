@@ -36,13 +36,43 @@ Personnage2 = {"Nom":"Moudujon","Classe":Classe["Copromancien"]["Nom"],"Niveau":
 #passage de niveau
 
 def monter_niveau(perso = {}):
-    print(perso)
+    afficherPerso(perso)
     perso["Niveau"] += 1
     perso["Vie"] += 20
 
 
 
 #attaquer
+
+def attaque(perso1 = {}, perso2 = {}):
+    # degats1 = 10 * perso1["Niveau"]
+    # degats2 = 10 * perso2["Niveau"]
+
+    while perso1["Vie"] > 0 or perso2["Vie"] > 0:
+        degats1 = random.randint(1,6)
+        degats2 = random.randint(1,6)
+        perso2["Vie"] -= degats1
+        if perso2["Vie"] <= 0 :     
+            perso2["Vie"] = 0 
+            print(f"{perso2["Nom"]} perd {degats1} PV. -  PV restants : {perso2["Vie"]} - Attaque fatale\n")
+            break
+        print(f"{perso2["Nom"]} perd {degats1} PV. -  PV restants : {perso2["Vie"]} \n")
+        
+        perso1["Vie"] -= degats2
+        if perso1["Vie"] <= 0 : 
+            perso1["Vie"] = 0
+            print(f"{perso1["Nom"]} perd {degats2} PV. -  PV restants : {perso1["Vie"]} - Attaque fatale\n")
+            break
+        print(f"{perso1["Nom"]} perd {degats2} PV. -  PV restants : {perso1["Vie"]}\n")
+
+    if perso1["Vie"] == 0 :
+        print(f"{perso1["Nom"]} est mort.")
+    elif perso2["Vie"] == 0 :
+        print(f"{perso2["Nom"]} est mort.")
+
+attaque(Personnage1, Personnage2)
+
+
 def afficherPerso(perso):
      print(f"{perso["Nom"]}\n-Classe: {perso["Classe"]}\n-Niveau: {perso["Niveau"]}\n-Vie: {perso["Vie"]}\n-Defense: {perso["Defense"]}\n-XP: {perso["XP"]}\n\nINVENTAIRE\n{perso["Inventaire"]}")
 
@@ -109,17 +139,19 @@ def utiliserObjet(objet,cible,inventaire,cle):
 
 
 
-def executionPrg():
+# def executionPrg():
      
-    monter_niveau(Personnage1)
-    afficherPerso(Personnage1)
-    input(">")
-    utiliserObjet(Objet["1"],Personnage1,Inventaire1,"1")
-    input(">")
+#     monter_niveau(Personnage1)
+#     afficherPerso(Personnage1)
+#     input(">")
+#     utiliserObjet(Objet["1"],Personnage1,Inventaire1,"1")
+#     input(">")
 
-    afficherPerso(Personnage1)
-    input(">")
-    recalculerIndexInventaire(Inventaire1)
+#     afficherPerso(Personnage1)
+#     input(">")
+#     recalculerIndexInventaire(Inventaire1)
+
+#     attaque(Personnage1, Personnage2)
 
 
-executionPrg()
+# executionPrg()
