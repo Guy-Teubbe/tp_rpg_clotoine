@@ -43,9 +43,17 @@ print(Personnage1)
 
 #attaquer
 
-#ajouter à l'inventaire
 
+<<<<<<< HEAD
 def ajout_invent(var = {}):
+=======
+
+
+########################
+#ajouter à l'inventaire#
+########################
+def ajout_invent(var):
+>>>>>>> cd149a311801d3f429561b337fc793978e56cc01
     print(Objet)
     nb = input("Numéro de l'objet : ")
 
@@ -56,17 +64,24 @@ def ajout_invent(var = {}):
 # ajout_invent(Inventaire1)
 # print(Inventaire1)
 
-#utilisation d'un objet
-#utilisation d'un objet
 
-def utiliserObjet(objet,personnage,cible):
+
+########################
+#utilisation d'un objet#
+########################
+def utiliserObjet(objet,cible):
     #ajouter les bénéfices de l'objet sur le personnage
-        objet["propriété"]
-        objet["action"]
+        prop = objet["propriété"]
+        action = objet["action"]
         val = random.randint(objet["min"],objet["max"])
 
+        if action == "+":
+            cible[prop] += val
+        else:
+            cible[prop] -= val
 
+    
+        
 
-    #consommer l'objet de l'inventaire
 
 
