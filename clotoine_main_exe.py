@@ -13,9 +13,10 @@ Objet = {"Potion de Soin":{"propriété":"Vie","action":"+","min":1,"max":50},"P
 Inventaire1 = {"1":Objet["Potion de Soin"],"2":Objet["Potion de Soin"],"3":Objet["Potion de Soin"]}
 Inventaire2 = {"1":Objet["Potion de Soin"],"2":Objet["Potion de Soin"],"3":Objet["Poison de Vie"]}
 
-Classe = {"Nécromancien":{},"Zoomancien":{},"Copromancien":{}}
-Personnage1 = {"Nom":"Bandmou","Classe":Classe["Nécromancien"],"Niveau":1,"Vie":10,"Inventaire":Inventaire1,"Defense":9,"XP":0}
-Personnage1 = {"Nom":"Moudujon","Classe":Classe["Copromancien"],"Niveau":1,"Vie":10,"Inventaire":Inventaire2,"Defense":11,"XP":0}
+Classe = {"Nécromancien":{"Vie":"+2"},"Zoomancien":{"Defense":"+1"},"Copromancien":{"Objet":Objet["Poison de Vie"]}}
+
+Personnage1 = {"Nom":"Bandmou","Classe":Classe["Nécromancien"],"Niveau":1,"Vie":12,"Inventaire":Inventaire1,"Defense":9,"XP":0}
+Personnage1 = {"Nom":"Moudujon","Classe":Classe["Copromancien"],"Niveau":1,"Vie":10,"Inventaire":Inventaire2,"Defense":10,"XP":0}
 
 #Création des  classes
 
